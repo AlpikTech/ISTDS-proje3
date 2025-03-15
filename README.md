@@ -7,7 +7,7 @@ In that Repo, We are making our ISTDS's 2nd project.
 **What is Project subject?:**
 - Machine Learning - Classification
 ---
-What we gonna use?:
+**What we gonna use?:**
 - Database: `postgresql`
 - Web: `flask` & `streamlit`
 - `numpy`, `pandas`, `matplotlib` , `seaborn`
