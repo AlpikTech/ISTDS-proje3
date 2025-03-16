@@ -1,5 +1,12 @@
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="Obezite Tahmini",
+    initial_sidebar_state="collapsed",  # Sidebar varsayılan olarak kapalı)
+)
+
+
 # st.markdown("## **Obezite Tahmin Modeli**")
 # st.markdown("Bu site Obezite ile alakalı tahmin yapmak için tasarlanmıştır. Bunu yapmak için sınıflandırma modeli kullanacağız")
 
@@ -17,7 +24,7 @@ Bu site Obezite ile alakalı tahmin yapmak için tasarlanmıştır. Bunu yapmak 
 
 st.markdown("---")
 st.markdown("#### **Kilo**")
-st.slider("Kilonuzu Seçiniz:", min_value=30, max_value=200, value=70)
+st.slider("Kilonuzu Seçiniz:", min_value=30, max_value=150, value=70)
 
 st.markdown("---")
 st.markdown("#### **Boy**")
