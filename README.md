@@ -14,5 +14,5 @@ In that Repo, We are making our ISTDS's 2nd project.
 - `statsmodels`, `scikit-learn` , `mlxtend`
 - Visualization: `qlik` & `tableau` (Optional)
 ---
-#### streamlit link 
+### Streamlit Link 
 [Steramlit](https://obezitetahmin.streamlit.app/)
