@@ -13,3 +13,6 @@ In that Repo, We are making our ISTDS's 2nd project.
 - `numpy`, `pandas`, `matplotlib` , `seaborn`
 - `statsmodels`, `scikit-learn` , `mlxtend`
 - Visualization: `qlik` & `tableau` (Optional)
+---
+### Streamlit Link 
+[Steramlit](https://obezitetahmin.streamlit.app/)
