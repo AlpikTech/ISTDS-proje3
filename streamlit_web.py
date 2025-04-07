@@ -192,7 +192,7 @@ from joblib import load
 
 model = load('xgboost_model.pkl')
 
-scaler = StandardScaler()
+
 
 
 
