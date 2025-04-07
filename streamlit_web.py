@@ -2,17 +2,9 @@ import streamlit as st
 import numpy as np
 from datetime import datetime
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
+
 from sklearn.preprocessing import LabelEncoder,StandardScaler
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, ConfusionMatrixDisplay
-from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-import xgboost as xgb
-from xgboost import XGBClassifier
+
 
 
 st.set_page_config(
