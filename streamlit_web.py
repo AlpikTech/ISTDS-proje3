@@ -50,7 +50,7 @@ age = st.slider("Yaşınızı Seçiniz:", min_value=10, max_value=110, value=30)
 
 st.markdown("---")
 st.markdown("#### **Boy**")
-heigh = st.slider("Boyunuzu Seçiniz:", min_value=120, max_value=200, value=165)
+height = st.slider("Boyunuzu Seçiniz:", min_value=120, max_value=200, value=165)
 
 st.markdown("---")
 st.markdown("#### **Kilo**")
@@ -94,7 +94,7 @@ elif vegatable_food == "Seviye 3":
 
 st.markdown("---")
 st.markdown("**Günde Kaç Öğün Yemek Yersin**")
-st.number_input("", min_value=1, max_value=5, value=3, step=1)
+meals_per_day = st.number_input("", min_value=1, max_value=5, value=3, step=1)
 st.markdown("---")
 
 food_between_meals = st.selectbox(
@@ -105,6 +105,10 @@ if food_between_meals == "Hiçbir zaman":
 elif food_between_meals == "Bazen":
     food_between_meals_numeric = 2
 elif food_between_meals == "Sık sık":
+    food_between_meals_numeric = 1
+elif food_between_meals == "Her zaman":
+    food_between_meals_numeric = 0
+
     
 st.markdown("---")
 
@@ -163,12 +167,90 @@ st.markdown("---")
 alcohol = st.selectbox(
     "## **Hangi Sıklıkla Alkol Tüketirsin?**",
     ["Hiçbir zaman", "Bazen", "Sık sık", "Her zaman"])
+
+if alcohol == "Hiçbir zaman":
+    alcohol_numeric = 3
+elif alcohol == "Bazen":
+    alcohol_numeric = 2
+elif alcohol == "Sık sık":
+    alcohol_numeric = 1
+elif alcohol == "Her zaman":
+    alcohol_numeric = 0
+
 st.markdown("---")
 transportation = st.selectbox(
     "## **Genellikle Ulaşımını Ne ile Yaparsın?**",
     ["Otomobil", "Bisiklet", "Motobisiklet", "Toplu Taşıma", "Yürüme"])
 
-st.button("# **Tahmin Yap**")
+if transportation == "Otomobil":
+    transportation_numeric = 0
+elif transportation == "Bisiklet":
+    transportation_numeric = 1
+elif transportation == "Motobisiklet":
+    transportation_numeric = 2
+elif transportation == "Toplu Taşıma":
+    transportation_numeric = 3
+elif transportation == "Yürüme":
+    transportation_numeric = 4
+
+
+# Model
+
+from joblib import load
+
+model = load('xgboost_model.pkl')
+
+scaler = StandardScaler()
+
+
+
+input_df = pd.DataFrame({
+    'Unnamed: 0': [0],
+    'Gender': [gender_numeric],
+    'Age': [age],
+    'Height': [height],
+    'Weight': [weigh],
+    'family_history_with_overweight': [family_history_numeric],
+    'FAVC': [high_calorie_food_numeric],
+    'FCVC': [vegatable_food_numeric],
+    'NCP': [meals_per_day],
+    'CAEC': [food_between_meals_numeric],
+    'SMOKE': [smoking_numeric],
+    'CH2O': [water_numeric],
+    'SCC': [calorie_tracking_numeric],
+    'FAF': [physical_activity_numeric],
+    'TUE': [time_spent_on_tech_numeric],
+    'CALC': [alcohol_numeric],
+    'MTRANS': [transportation_numeric]
+
+})
+model = load('xgboost_model.pkl')
+scaler = load('scaler.pkl')  # scaler'ın kaydedildiği dosyayı yükleyin
+
+# Giriş verilerini ölçeklendirme
+scaled_input = scaler.transform(input_df)
+
+# Ölçeklendirilmiş veri ile tahmin yapma
+prediction = model.predict(scaled_input)
+
+if prediction[0] == 1:
+    prediction_text = "Normal Kilo"
+elif prediction[0] == 5:
+    prediction_text = "Obez Seviye 1"
+elif prediction[0] == 6:
+    prediction_text = "Obez Seviye 2"
+elif prediction[0] == 2:
+    prediction_text = "Obezize Tip 1"
+elif prediction[0] == 0:
+    prediction_text = "Yetersiz Kilo"
+elif prediction[0] == 3:
+    prediction_text = "Obezize Tip 2"
+elif prediction[0] == 4:
+    prediction_text = "Obezize Tip 3"
+
+if st.button("**Tahmin Yap**"):
+    with st.expander("# **Tahmin Sonucu**"):
+        st.success(f"Tahmin Sonucu: {prediction_text}")
 
 
 
