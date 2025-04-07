@@ -3,7 +3,7 @@ import numpy as np
 from datetime import datetime
 import pandas as pd
 import xgboost as xgb
-
+from sklearn.preprocessing import StandardScaler
 
 
 st.set_page_config(
