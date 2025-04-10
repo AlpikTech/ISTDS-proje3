@@ -19,7 +19,7 @@ st.markdown("""# **Obezite Tahmin Modeli**
 
 Bu site Obezite ile alakalı tahmin yapmak için tasarlanmıştır. Bunu yapmak için sınıflandırma modeli kullanacağız.
 
-### **Ne kullanabilirdik:**
+### **Ne kullandık:**
 - Web: `streamlit`
 - Veri Bilimi: `numpy`, `pandas`, `matplotlib` , `seaborn`
 - Model Kütüphaneleri: `scikit-learn`, `XGBosst`
