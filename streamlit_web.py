@@ -20,11 +20,9 @@ st.markdown("""# **Obezite Tahmin Modeli**
 Bu site Obezite ile alakalı tahmin yapmak için tasarlanmıştır. Bunu yapmak için sınıflandırma modeli kullanacağız.
 
 ### **Ne kullanabilirdik:**
-- Veri Tabanı: `postgresql`
-- Web: `flask` & `streamlit`
+- Web: `streamlit`
 - Veri Bilimi: `numpy`, `pandas`, `matplotlib` , `seaborn`
-- Model Kütüphaneleri:  `statsmodels`, `scikit-learn` , `mlxtend`, `XGBosst`
-- Görselleştirme: `qlik` & `tableau` (Opsiyonel)
+- Model Kütüphaneleri: `scikit-learn`, `XGBosst`
 """)
 st.markdown("---")
 gender = st.radio(
