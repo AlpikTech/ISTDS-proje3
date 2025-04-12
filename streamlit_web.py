@@ -194,7 +194,6 @@ model = load('xgboost_model.pkl')
 
 
 input_df = pd.DataFrame({
-    'Unnamed: 0': [0],
     'Gender': [gender_numeric],
     'Age': [age],
     'Height': [height],
