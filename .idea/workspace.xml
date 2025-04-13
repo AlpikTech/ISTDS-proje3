@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e483f411-ba66-4c15-935c-af6d361acf5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/streamlit_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/streamlit_web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Obesity_DataSet_Edited.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,14 @@
       <workItem from="1743867224501" duration="2538000" />
       <workItem from="1743953108558" duration="1405000" />
       <workItem from="1743954542057" duration="6548000" />
-      <workItem from="1744042342096" duration="321000" />
+      <workItem from="1744042342096" duration="4055000" />
+      <workItem from="1744127059951" duration="713000" />
+      <workItem from="1744225735922" duration="563000" />
+      <workItem from="1744294736158" duration="4007000" />
+      <workItem from="1744389579325" duration="20000" />
+      <workItem from="1744466296169" duration="6814000" />
+      <workItem from="1744478665578" duration="1331000" />
+      <workItem from="1744555186969" duration="8676000" />
     </task>
     <servers />
   </component>
