@@ -8,7 +8,6 @@ from sklearn.preprocessing import StandardScaler
 
 st.set_page_config(
     page_title="Obezite Tahmini",
-    initial_sidebar_state="collapsed",  # Sidebar varsayılan olarak kapalı)
 )
 
 
@@ -20,6 +19,7 @@ st.markdown("""# **Obezite Tahmin Modeli**
 Bu site Obezite ile alakalı tahmin yapmak için tasarlanmıştır. Bunu yapmak için sınıflandırma modeli kullanacağız.
 
 ### **Ne kullandık:**
+- SQL: `PostgreSQL`
 - Web: `streamlit`
 - Veri Bilimi: `numpy`, `pandas`, `matplotlib` , `seaborn`
 - Model Kütüphaneleri: `scikit-learn`, `XGBosst`

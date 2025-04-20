@@ -8,7 +8,7 @@ In that Repo, We are making our ISTDS's 2nd project.
 - Machine Learning - Classification
 ---
 ## **What We Used:**
-- Web: `streamlit`
+- SQL: `PostgreSQL`
 - Data Science: `numpy`, `pandas`, `matplotlib` , `seaborn`
 - Model Libs: `scikit-learn`, `XGBosst`
 ---
